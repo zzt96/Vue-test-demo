@@ -2,13 +2,6 @@
     <div>
       <h1>动态路由实验，当有两个以上的参数需要使用router来传递，如何配置</h1>
       <h2>应用场景如：新闻列表，注意路由变化</h2>
-      <h3>点击更改路由参数，然后页面从路由参数拿值进行渲染</h3>
-      <h3>实现功能 1 ：保存两个参数：页码X以及新闻种类Y</h3>
-      <h3>实现功能 2 ：点击页码时路由变化为list-Y-X</h3>
-      <h3>实现功能 3 ：点击种类时路由变化为list-Y</h3>
-      <h3>实现功能 4 ：点击种类再点击页码时路由变化为list-Y-X</h3>
-      <h3>实现功能 5 ：点击页码再点击种类时，页码重新赋值为1</h3>
-      <h3>实现功能 6 ：当点进文章详情后退回上个页面时保存两个参数：页码以及新闻种类</h3>
       <hr />
       <h2>当前路由参数（$routerparams)</h2>
       <span>{{ routerparams }}</span>
@@ -63,7 +56,7 @@
           // 路由跳转，使用带有一个参数的路由
           this.$router.push ({ name: 'testParam1', params: { AParam: item }})
           this.cate = item
-          // 点击新闻种类后将页码归为1
+
           this.currentPage = 1
         },
         handleCurrentChange(val) {
