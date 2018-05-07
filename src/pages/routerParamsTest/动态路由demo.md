@@ -10,8 +10,9 @@
 下载项目npm install，npm run dev之后
 更改地址，后面+/testParam/
 ## 路由配置
-在这里可以看出，可以使用/list-:AParam-:BParam'的形式配置路由
-当AParam=1，BParam=2的时候，对应的路由是/list-1-2
+在这里可以看出，可以使用/list-:AParam-:BParam'的形式配置路由   
+当AParam=1，BParam=2的时候，对应的路由是/list-1-2  
+另外，之所以在这里使用三个路由配置是为了满足三种不同的参数调用情况，不用参数，一个参数，以及两个参数。
 ```
     {
       path: '/testParam/list-:AParam-:BParam',
