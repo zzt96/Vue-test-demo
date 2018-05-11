@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import home from '@/pages/index'
 import elementLayout from '../pages/elementLayout/index.vue'
 import testParam from '../pages/routerParamsTest/index.vue'
+import page from '../pages/pagination/index.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'home',
+      component: home
     }, {
       path: '/elementLayout',
       name: 'elementLayout',
@@ -27,6 +28,10 @@ export default new Router({
       path: '/testParam/',
       name: 'testParam2',
       component: testParam
+    }, {
+      path: '/page/',
+      name: 'page',
+      component: page
     }
   ]
 })
