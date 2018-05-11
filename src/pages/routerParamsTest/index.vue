@@ -9,6 +9,7 @@
       <div>
         <h2>点击区域</h2>
         <span>NewsCategory:</span>
+        <span>{{ cate }}</span>
         <div>
           <!--写法1-->
           <!--<router-link :to="{ name:'testParam1', params:{AParam: 'a'}}" tag="el-button">a</router-link>-->
@@ -51,12 +52,13 @@
       methods: {
         fetchParams() {
           this.routerparams = this.$route.params
+          this.currentPage = parseInt(this.routerparams.BParam)?parseInt(this.routerparams.BParam):1
+          this.cate = this.routerparams.AParam?this.routerparams.AParam:'a'
         },
         changeCate(item) {
           // 路由跳转，使用带有一个参数的路由
           this.$router.push ({ name: 'testParam1', params: { AParam: item }})
           this.cate = item
-
           this.currentPage = 1
         },
         handleCurrentChange(val) {
