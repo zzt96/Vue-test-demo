@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import home from '@/pages/index'
 import elementLayout from '../pages/elementLayout/index.vue'
 import testParam from '../pages/routerParamsTest/index.vue'
-import page from '../pages/pagination/index.vue'
+import page from '../pages/page/index.vue'
+import media from '../pages/media/index.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -32,6 +33,10 @@ export default new Router({
       path: '/page/',
       name: 'page',
       component: page
+    }, {
+      path: '/media/',
+      name: 'media',
+      component: media
     }
   ]
 })
